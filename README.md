@@ -2,21 +2,21 @@
 Docker python with machine learning libs on Mac OS
 
 # In dockerfile
-Python 3
+Python 3  
 libs: numpy scipy matplotlib scikit-learn pandas
 
 # Construct image
-$ git clone https://github.com/CrystalRanita/DockerPythonSciMac
-$ cd DockerPythonSciMac
-$ docker build -t pythonml:v1 .
-(where pythonml is repository name and v1 is tag)
+$ git clone https://github.com/CrystalRanita/DockerPythonSciMac  
+$ cd DockerPythonSciMac  
+$ docker build -t pythonml:v1 .  
+(where pythonml is repository name and v1 is tag)  
 
 # Check docker images:
 $ docker images
 find which one you want to run
 
 # Run container:
-$ docker run -t -i pythonml:v1 /bin/bash
+$ docker run -t -i pythonml:v1 /bin/bash  
 (where pythonml is repository name and v1 is tag)
 
 # Check libs version in container
