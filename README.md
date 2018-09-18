@@ -50,5 +50,5 @@ Example: docker cp MachineLearning/. 069f40db12a2:/target
 Copy host file in MachineLearning directory to container's /target directory  
 
 # Commit change to keep data
-Instruction: docker commit containerID IMAGE
+Instruction: docker commit containerID IMAGE  
 docker commit ce7f5ced748c pythonml:v1
