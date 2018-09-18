@@ -43,3 +43,9 @@ sklearn: 0.19.2
 >>> import pandas
 >>> print('pandas: {}'.format(pandas.__version__))
 pandas: 0.23.4
+
+# Copy host file to container
+Instruction: docker cp SourceDir containerID/DestDir  
+Example: docker cp MachineLearning/. 069f40db12a2:/target  
+Copy host file in MachineLearning directory to container's /target directory  
+
