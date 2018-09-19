@@ -16,8 +16,10 @@ $ docker images
 find which one you want to run
 
 # Run container:
-$ docker run -t -i pythonml:v1 /bin/bash  
-(where pythonml is repository name and v1 is tag)
+docker run -v /Users/host_crystal/:/home/container_crystal -it pythonml:v1 /bin/bash
+(where pythonml is repository name and v1 is tag.  
+Use -v here mount host location to container's location, modify will kept . 
+and can easy use visual studio code to edit code files.)
 
 # Check libs version in container
 After container running
@@ -50,5 +52,7 @@ Example: docker cp MachineLearning/. 069f40db12a2:/target
 Copy host file in MachineLearning directory to container's /target directory  
 
 # Commit change to keep data
+if use $ docker run -t -i pythonml:v1 /bin/bash .  
+without mount point, after exit container modify will gone without commit.
 Instruction: docker commit containerID IMAGE  
 docker commit ce7f5ced748c pythonml:v1
